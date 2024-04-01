@@ -5,16 +5,35 @@
 .main {
     .sidecard {
         background-color: #DDFFBC;
-        clip-path: ellipse(49% 51% at 66% 6%);
+        clip-path: ellipse(49% 60% at 66% 6%);
         z-index: 100;
+
+        .slider {
+            width: 500px;
+            height: 500px;
+            border: 2px dashed white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .imgBx {
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                transform: rotate(calc(360/5 * var(--i)));
+                transform-origin: 100px;
+
+                img {
+                    position: absolute;
+                }
+            }
+
+        }
     }
+
     .nav {
         z-index: 200;
     }
 }
-
-
-  
-  
-  
-  
