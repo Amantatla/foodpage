@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main {
+    .sidecard {
+        background-color: #DDFFBC;
+        clip-path: ellipse(49% 51% at 66% 6%);
+        z-index: 100;
+    }
+    .nav {
+        z-index: 200;
+    }
+}
+
+
+  
+  
+  
+  
