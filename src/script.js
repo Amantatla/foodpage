@@ -21,6 +21,9 @@ const totalSteps = 5;
 const transitionDuration = 500;
 const stepDuration = transitionDuration / totalSteps;
 const slider = document.querySelector('.slider');
+const button = document.getElementById('contact');
+const phoneNumber = '03266213085'; 
+const message = encodeURIComponent('Hello, I want to chat!'); 
 
 function changeImage(direction) {
     const nextImageIndex = direction === 'prev' ? (currentImageIndex - 1 + images.length) % images.length : (currentImageIndex + 1) % images.length;
@@ -92,3 +95,9 @@ document.querySelector('#prev').style.backgroundColor = '#5CAC0E';
 document.querySelector('#next').style.backgroundColor = '#5CAC0E';
 document.querySelector('#khana').style.color = '#5CAC0E';
 document.querySelector('#contact').style.backgroundColor = '#5CAC0E';
+
+
+button.addEventListener('click', () => {
+    const whatsappLink = `https://wa.me/${phoneNumber}/?text=${message}`;
+    window.open(whatsappLink, '_blank');
+});
