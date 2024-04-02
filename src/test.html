@@ -5,49 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .clock {
-            width: 300px;
-            height: 300px;
-            background-color: rgba(100, 99, 99, 0.3);
-            border: 2px solid white;
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        body .container{
+            position: relative;
+            width: 600px;
+            height: 600px;
+            border: 2px dashed black;
             border-radius: 50%;
-            box-shadow: 0px 0px 30px rgba(153, 57, 57, 0.9);
+        }
+        .container .slider {
+            position: relative;
+            left: -50%;
+            width: 100%;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .clock span {
+        .container .slider .imgBx {
             position: absolute;
-            transform: rotate(calc(30deg * var(--i)));
-            inset: 12px;
-            text-align: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            transform: rotate(calc(360deg/10 * var(--i)));
+            transform-origin: 340px;
+            z-index: 100;
         }
 
-        .clock span b {
-            transform: rotate(calc(-30deg * var(--i)));
-            display: inline-block;
-            font-size: 20px;
+        .container .slider .imgBx img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="clock">
-            <span style="--i:1"><b>1</b></span>
-            <span style="--i:2"><b>2</b></span>
-            <span style="--i:3"><b>3</b></span>
-            <span style="--i:4"><b>4</b></span>
-            <span style="--i:5"><b>5</b></span>
-            <span style="--i:6"><b>6</b></span>
-            <span style="--i:7"><b>7</b></span>
-            <span style="--i:8"><b>8</b></span>
-            <span style="--i:9"><b>9</b></span>
-            <span style="--i:10"><b>10</b></span>
-            <span style="--i:11"><b>11</b></span>
-            <span style="--i:12"><b>12</b></span>
-    
-        </div>
+        <div class="slider">
+            <div class="imgBx" style="--i:1">
+              <img src="./Assets/image 1.png"  alt="1">
+            </div>
+            <div class="imgBx" style="--i:2">
+              <img src="./Assets/image 2.png" alt="2" >
+            </div>
+            <div class="imgBx" style="--i:3">
+              <img src="./Assets/image 3.png" alt="3" >
+            </div>
+            <div class="imgBx" style="--i:4">
+              <img src="./Assets/image 4.png" alt="4" >
+            </div>
+            <div class="imgBx" style="--i:5">
+              <img src="./Assets/image 5.png" alt="5" >
+            </div>
+                <div class="imgBx" style="--i:6">
+                <img src="./Assets/image 1.png" alt="6" >
+                </div>
+                <div class="imgBx" style="--i:7">
+                <img src="./Assets/image 2.png" alt="7" >
+                </div>
+                <div class="imgBx" style="--i:8">
+                <img src="./Assets/image 3.png" alt="8" >
+                </div>
+                <div class="imgBx" style="--i:9">
+                <img src="./Assets/image 4.png" alt="9" >
+                </div>
+                <div class="imgBx" style="--i:10">
+                <img src="./Assets/image 5.png" alt="10" >
+            </div>
+            </div>
     </div>
 </body>
 </html>

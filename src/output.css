@@ -592,6 +592,10 @@ video {
   position: absolute;
 }
 
+.relative {
+  position: relative;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -600,16 +604,49 @@ video {
   top: 0px;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-10 {
+  height: 2.5rem;
 }
 
 .h-\[80\%\] {
   height: 80%;
 }
 
-.h-screen {
-  height: 100vh;
+.max-h-screen {
+  max-height: 100vh;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-\[60\%\] {
+  width: 60%;
 }
 
 .w-\[80\%\] {
@@ -620,12 +657,12 @@ video {
   width: 100%;
 }
 
-.w-screen {
-  width: 100vw;
-}
-
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .flex-wrap {
@@ -640,6 +677,23 @@ video {
   justify-content: space-between;
 }
 
+.gap-x-8 {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.rounded-\[50\%\] {
+  border-radius: 50%;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .border {
   border-width: 1px;
 }
@@ -649,34 +703,160 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.p-10 {
+  padding: 2.5rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-2\.5 {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .main {
   .sidecard {
     background-color: #DDFFBC;
-    -webkit-clip-path: ellipse(49% 60% at 66% 6%);
-            clip-path: ellipse(49% 60% at 66% 6%);
+    -webkit-clip-path: circle(42.0% at 70% 10%);
+            clip-path: circle(42.0% at 70% 10%);
     z-index: 100;
-    .slider {
-      width: 500px;
-      height: 500px;
-      border: 2px dashed white;
+    .sliderCard {
+      position: relative;
+      width: 600px;
+      height: 600px;
+      border: 2px dashed black;
       border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .imgBx {
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        transform: rotate(calc(360/5 * var(--i)));
-        transform-origin: 100px;
+      bottom: -35%;
+      left: 20%;
+      .slider {
+        position: relative;
+        left: -50%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .imgBx {
+          position: absolute;
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          overflow: hidden;
+          transform: rotate(calc(270deg/9 * var(--i)));
+          transform-origin: 340px;
+          z-index: 100;
+          transition: transform 0.5s ease-in-out;
+        }
         img {
           position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          -o-object-fit: cover;
+             object-fit: cover;
         }
       }
     }
   }
-  .nav {
-    z-index: 200;
+}
+
+.nav {
+  z-index: 200;
+}
+
+.content {
+  position: absolute;
+  bottom: 20%;
+  div {
+    h1 {
+      color: #5CAC0E;
+    }
+    button {
+      background-color: #5CAC0E;
+    }
   }
+  .rotate {
+    margin-left: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    div {
+      button {
+        background-color: #5CAC0E;
+      }
+    }
+    .images {
+      z-index: 400;
+      margin-left: 10px;
+      img {
+        width: 256px !important;
+        height: 256px !important;
+        -o-object-fit: cover;
+           object-fit: cover;
+      }
+    }
+  }
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
 }
