@@ -39,7 +39,7 @@ function changeImage(direction) {
     // slider change 
     const newOrder = [];
     for (let i = 0; i < sliderImages.length; i++) {
-        debugger
+        
         const newIndex = (currentImageIndex + i) % sliderImages.length;
         newOrder.push(newIndex + 1);
     }

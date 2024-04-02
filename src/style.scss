@@ -27,7 +27,6 @@
                 justify-content: center;
                 align-items: center;
 
-
                 .imgBx {
                     position: absolute;
                     width: 90px;
@@ -60,7 +59,6 @@
 
 .content {
     position: absolute;
-    bottom: 20%;
 
     div {
         h1 {
@@ -77,6 +75,8 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        z-index: 400;
+
 
         div {
             button {
@@ -85,7 +85,6 @@
         }
 
         .images {
-            z-index: 400;
             margin-left: 10px;
 
             img {
